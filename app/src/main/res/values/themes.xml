@@ -8,4 +8,9 @@
 
     <style name="Theme.CoffeeShop" parent="Base.Theme.CoffeeShop" />
 
+    <style name="Theme.CoffeeShop.Main" parent="Base.Theme.CoffeeShop">
+
+        <item name="android:statusBarColor">@color/dark</item>
+    </style>
+
 </resources>
