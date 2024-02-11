@@ -17,4 +17,11 @@
         <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
+    <style name="Theme.CoffeeShop.Input.Layout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!--        <item name="colorControlNormal">#400060AB</item>-->
+        <!--        <item name="colorControlActivated">#0060AB</item>-->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>
