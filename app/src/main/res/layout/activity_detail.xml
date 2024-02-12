@@ -4,6 +4,165 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    android:background="@color/bg"
     tools:context=".detail.view.DetailActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_bar_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:background="@color/bg"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center_horizontal"
+            app:menu="@menu/menu_bottom_nav">
+
+            <TextView
+                android:id="@+id/main_toolbar_title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sora_bold"
+                android:text="@string/detail"
+                android:textSize="18sp"
+                android:layout_gravity="center" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
+        android:id="@+id/detail_main_img"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_corner"
+        android:clipToOutline="true"
+        tools:targetApi="s"
+        android:layout_marginTop="24dp"
+        tools:src="@tools:sample/backgrounds/scenic"
+        app:layout_constraintTop_toBottomOf="@id/main_bar_layout"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/detail_title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Cappuccino"
+        app:layout_constraintTop_toBottomOf="@id/detail_main_img"
+        android:fontFamily="@font/sora_bold"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/detail_help_text_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="with Chocolate"
+        app:layout_constraintTop_toBottomOf="@id/detail_title_txt"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/sora"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp" />
+
+
+    <ImageView
+        android:id="@+id/detail_rating_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/rating"
+        app:layout_constraintTop_toBottomOf="@id/detail_help_text_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/detail_rating_average_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/detail_rating_icon"
+        app:layout_constraintStart_toEndOf="@id/detail_rating_icon"
+        app:layout_constraintBottom_toBottomOf="@id/detail_rating_icon"
+        android:fontFamily="@font/sora_bold"
+        android:textSize="16sp"
+        android:layout_marginStart="4dp"
+        tools:text="4.8" />
+
+
+    <TextView
+        android:id="@+id/detail_rating_count_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/detail_rating_average_txt"
+        app:layout_constraintStart_toEndOf="@id/detail_rating_average_txt"
+        app:layout_constraintBottom_toBottomOf="@id/detail_rating_average_txt"
+        android:layout_marginStart="4dp"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/sora"
+        tools:text="(230)" />
+
+
+    <ImageView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/bean"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/detail_milk_icon"
+        app:layout_constraintEnd_toStartOf="@id/detail_milk_icon"
+        android:contentDescription="@null"
+        android:layout_marginEnd="12dp" />
+
+    <ImageView
+        android:id="@+id/detail_milk_icon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/milk"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/detail_rating_average_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@null" />
+
+    <View
+        android:id="@+id/detail_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/detail_rating_icon"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray_white" />
+
+    <TextView
+        android:id="@+id/detail_description_title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        app:layout_constraintTop_toBottomOf="@id/detail_divider"
+        android:fontFamily="@font/sora_bold"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/detail_description_content_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_description"
+        app:layout_constraintTop_toBottomOf="@id/detail_description_title_txt"
+        android:fontFamily="@font/sora"
+        android:textColor="@color/gray_black"
+        android:layout_marginTop="12dp"
+        android:textSize="14sp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
