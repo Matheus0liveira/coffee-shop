@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_size_container"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/item_size_disabled"
+    android:alpha="2">
+
+    <TextView
+        android:id="@+id/item_size_text_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="S"
+        android:gravity="center"
+        android:textColor="@color/gray_black"
+        android:fontFamily="@font/sora_bold"
+        android:textSize="14sp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

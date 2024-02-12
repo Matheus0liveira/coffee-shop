@@ -24,6 +24,9 @@ class DetailActivity : AppCompatActivity() {
             detailMainImg.setImageResource(R.drawable.big_coffee)
             detailRatingAverageTxt.text = "5.0"
             detailRatingCountTxt.text = "(234)"
+            detailTitleTxt.text = "Cappucino"
+            detailHelpTextTxt.text = "With Chocolate"
+            detailSizeRadio.onChangeItemSize = { Log.i("CLICKED", "$it") }
         }
     }
 
