@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.widget.Toolbar
 import com.matheus0liveira.coffeeshop.R
 import com.matheus0liveira.coffeeshop.databinding.ActivityDetailBinding
 
@@ -16,7 +17,10 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
         with(binding) {
-            setSupportActionBar(mainToolbar)
+
+            val toolbar = binding.root.findViewById<Toolbar>(R.id.main_toolbar)
+
+            setSupportActionBar(toolbar)
             supportActionBar?.title = ""
             supportActionBar?.setHomeAsUpIndicator(R.drawable.arrow_left)
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
